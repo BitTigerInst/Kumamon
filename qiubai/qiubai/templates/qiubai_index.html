@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<!--Liquid output和tag的使用-->
+<body>
+    {% for joke in p_jokes %}
+    <h3>{{ joke.authors }}</h3>
+    <div>{{ joke.contents }}</div>
+    <ul>
+        {% for comment in joke.comments %}
+        <li>{{ comment.comment_author }} : {{ comment.comment_content }}</li>
+        {% endfor %}
+    </ul>
+    <hr />
+    {% endfor %}
+</body>
+</html>
+
+
